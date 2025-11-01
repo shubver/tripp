@@ -7,9 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Your brand colors
-        primary: '#3B82F6',
-        secondary: '#8B5CF6',
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+        },
+      },
+      animation: {
+        'bounce-delay-100': 'bounce 1s infinite 0.1s',
+        'bounce-delay-200': 'bounce 1s infinite 0.2s',
       },
     },
   },
