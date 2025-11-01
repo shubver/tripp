@@ -11,198 +11,237 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Mock itinerary data
 const mockItinerary = {
-  destination: "Tokyo, Japan",
-  startDate: "2024-06-15",
-  endDate: "2024-06-20",
-  totalCost: 2500,
-  days: [
+  "destination": "Paris, France",
+  "startDate": "2025-11-01",
+  "endDate": "2025-11-03",
+  "totalCost": 1500.0,
+  "days": [
     {
-      dayNumber: 1,
-      date: "2024-06-15",
-      title: "Arrival & Shibuya Exploration",
-      activities: [
+      "dayNumber": 1,
+      "date": null,
+      "title": "Iconic Art and Parisian Charm",
+      "activities": [
         {
-          name: "Arrive at Narita Airport",
-          description: "Land at Tokyo Narita International Airport and take the Narita Express to central Tokyo",
-          time: "09:00 AM",
-          duration: "2 hours",
-          location: "Narita Airport",
-          coordinates: {
-            lat: 35.7720,
-            lng: 140.3929
+          "name": "Louvre Museum Visit",
+          "description": "Explore masterpieces like the Mona Lisa and Venus de Milo.",
+          "time": "09:00 AM",
+          "duration": "3 hours",
+          "location": "Louvre Museum",
+          "coordinates": {
+            "lat": 48.8611473,
+            "lng": 2.33802768704666
           },
-          cost: 30,
-          category: "transport"
+          "cost": 20.0,
+          "category": "museum"
         },
         {
-          name: "Check into Hotel",
-          description: "Check into your hotel in Shibuya, drop off luggage and freshen up",
-          time: "12:00 PM",
-          duration: "1 hour",
-          location: "Shibuya",
-          coordinates: {
-            lat: 35.6595,
-            lng: 139.7004
+          "name": "Lunch at a Traditional Bistro",
+          "description": "Enjoy classic French cuisine at a local bistro.",
+          "time": "12:30 PM",
+          "duration": "2 hours",
+          "location": "Le Bouillon Chartier",
+          "coordinates": {
+            "lat": 48.8719356,
+            "lng": 2.3430137
           },
-          cost: 150,
-          category: "accommodation"
+          "cost": 30.0,
+          "category": "food"
         },
         {
-          name: "Shibuya Crossing & Shopping",
-          description: "Visit the world's busiest pedestrian crossing and explore the vibrant shopping district",
-          time: "02:00 PM",
-          duration: "3 hours",
-          location: "Shibuya Crossing",
-          coordinates: {
-            lat: 35.6595,
-            lng: 139.7004
+          "name": "Tuileries Garden Stroll",
+          "description": "Relax and enjoy the beautiful Tuileries Garden.",
+          "time": "03:00 PM",
+          "duration": "2 hours",
+          "location": "Tuileries Garden",
+          "coordinates": {
+            "lat": 48.863566199999994,
+            "lng": 2.326955235215837
           },
-          cost: 50,
-          category: "attraction"
+          "cost": 0.0,
+          "category": "sightseeing"
         },
         {
-          name: "Dinner at Ichiran Ramen",
-          description: "Experience authentic tonkotsu ramen at this famous chain with individual booths",
-          time: "07:00 PM",
-          duration: "1.5 hours",
-          location: "Shibuya",
-          coordinates: {
-            lat: 35.6603,
-            lng: 139.6980
+          "name": "Mus\u00e9e d'Orsay",
+          "description": "Visit Mus\u00e9e d'Orsay, housed in a former railway station, and admire Impressionist and Post-Impressionist masterpieces.",
+          "time": "05:30 PM",
+          "duration": "2 hours",
+          "location": "Mus\u00e9e d'Orsay",
+          "coordinates": {
+            "lat": 48.85991785,
+            "lng": 2.3265849372230356
           },
-          cost: 15,
-          category: "food"
+          "cost": 16.0,
+          "category": "museum"
+        },
+        {
+          "name": "Dinner near the Seine",
+          "description": "Enjoy a delightful dinner at a restaurant with views of the Seine River.",
+          "time": "08:00 PM",
+          "duration": "2 hours",
+          "location": "Les Ombres",
+          "coordinates": {
+            "lat": 48.861112,
+            "lng": 2.2985572
+          },
+          "cost": 70.0,
+          "category": "food"
         }
       ]
     },
     {
-      dayNumber: 2,
-      date: "2024-06-16",
-      title: "Traditional Tokyo: Asakusa & Senso-ji Temple",
-      activities: [
+      "dayNumber": 2,
+      "date": null,
+      "title": "Montmartre and Culinary Delights",
+      "activities": [
         {
-          name: "Senso-ji Temple Visit",
-          description: "Explore Tokyo's oldest Buddhist temple, walk through Nakamise Shopping Street",
-          time: "09:00 AM",
-          duration: "2.5 hours",
-          location: "Asakusa",
-          coordinates: {
-            lat: 35.7148,
-            lng: 139.7967
+          "name": "Visit Sacr\u00e9-C\u0153ur Basilica",
+          "description": "Explore the stunning Sacr\u00e9-C\u0153ur Basilica in Montmartre.",
+          "time": "09:00 AM",
+          "duration": "2 hours",
+          "location": "Sacr\u00e9-C\u0153ur Basilica",
+          "coordinates": {
+            "lat": 48.890241,
+            "lng": 2.325361
           },
-          cost: 0,
-          category: "attraction"
+          "cost": 0.0,
+          "category": "sightseeing"
         },
         {
-          name: "Traditional Japanese Lunch",
-          description: "Enjoy tempura at a local restaurant near Senso-ji",
-          time: "12:00 PM",
-          duration: "1.5 hours",
-          location: "Asakusa",
-          coordinates: {
-            lat: 35.7120,
-            lng: 139.7950
+          "name": "Explore Montmartre",
+          "description": "Wander through the charming streets of Montmartre, known for its artistic history.",
+          "time": "11:30 AM",
+          "duration": "1.5 hours",
+          "location": "Place du Tertre",
+          "coordinates": {
+            "lat": 48.886527400000006,
+            "lng": 2.3408043041413396
           },
-          cost: 25,
-          category: "food"
+          "cost": 0.0,
+          "category": "sightseeing"
         },
         {
-          name: "Tokyo Skytree",
-          description: "Visit the tallest structure in Japan for panoramic city views",
-          time: "02:30 PM",
-          duration: "2 hours",
-          location: "Sumida",
-          coordinates: {
-            lat: 35.7101,
-            lng: 139.8107
+          "name": "Lunch in Montmartre",
+          "description": "Enjoy a delicious lunch at a traditional French restaurant in Montmartre.",
+          "time": "01:00 PM",
+          "duration": "2 hours",
+          "location": "Le Consulat",
+          "coordinates": {
+            "lat": 48.8595685,
+            "lng": 2.3795089
           },
-          cost: 35,
-          category: "attraction"
+          "cost": 40.0,
+          "category": "food"
         },
         {
-          name: "Sumida River Cruise",
-          description: "Evening river cruise with views of Tokyo's illuminated skyline",
-          time: "06:00 PM",
-          duration: "1.5 hours",
-          location: "Sumida River",
-          coordinates: {
-            lat: 35.7095,
-            lng: 139.8070
+          "name": "Picasso Museum",
+          "description": "Explore the world's most extensive collection of works by the Spanish artist Pablo Picasso.",
+          "time": "03:30 PM",
+          "duration": "2 hours",
+          "location": "Picasso Museum",
+          "coordinates": {
+            "lat": 48.842182,
+            "lng": 2.365046
           },
-          cost: 20,
-          category: "activity"
+          "cost": 14.0,
+          "category": "museum"
+        },
+        {
+          "name": "Wine and Cheese Tasting",
+          "description": "Indulge in a wine and cheese tasting experience.",
+          "time": "06:00 PM",
+          "duration": "2 hours",
+          "location": "\u00d4 Chateau",
+          "coordinates": {
+            "lat": 48.8642723,
+            "lng": 2.3441257
+          },
+          "cost": 60.0,
+          "category": "food"
+        },
+        {
+          "name": "Dinner in Le Marais",
+          "description": "Discover the diverse culinary scene in Le Marais.",
+          "time": "08:30 PM",
+          "duration": "2 hours",
+          "location": "L'As du Fallafel",
+          "coordinates": {
+            "lat": 48.857415,
+            "lng": 2.3590682
+          },
+          "cost": 25.0,
+          "category": "food"
         }
       ]
     },
     {
-      dayNumber: 3,
-      date: "2024-06-17",
-      title: "Modern Tokyo: Harajuku & Roppongi",
-      activities: [
+      "dayNumber": 3,
+      "date": null,
+      "title": "Eiffel Tower and Latin Quarter Exploration",
+      "activities": [
         {
-          name: "Meiji Shrine",
-          description: "Visit this serene Shinto shrine surrounded by forest in the heart of the city",
-          time: "08:30 AM",
-          duration: "1.5 hours",
-          location: "Harajuku",
-          coordinates: {
-            lat: 35.6762,
-            lng: 139.6993
+          "name": "Eiffel Tower Visit",
+          "description": "Visit the iconic Eiffel Tower and enjoy panoramic views of Paris.",
+          "time": "09:00 AM",
+          "duration": "2.5 hours",
+          "location": "Eiffel Tower",
+          "coordinates": {
+            "lat": 48.8582599,
+            "lng": 2.2945006358633115
           },
-          cost: 0,
-          category: "attraction"
+          "cost": 26.0,
+          "category": "sightseeing"
         },
         {
-          name: "Harajuku & Takeshita Street",
-          description: "Explore youth fashion culture and quirky shops",
-          time: "10:30 AM",
-          duration: "2 hours",
-          location: "Harajuku",
-          coordinates: {
-            lat: 35.6702,
-            lng: 139.7027
+          "name": "Lunch in the Latin Quarter",
+          "description": "Enjoy a traditional French lunch in the vibrant Latin Quarter.",
+          "time": "12:00 PM",
+          "duration": "2 hours",
+          "location": "La Jacobine",
+          "coordinates": {
+            "lat": 48.8533357,
+            "lng": 2.3389536
           },
-          cost: 40,
-          category: "shopping"
+          "cost": 35.0,
+          "category": "food"
         },
         {
-          name: "Omotesando Lunch",
-          description: "Lunch at a trendy cafe on Tokyo's Champs-Élysées",
-          time: "01:00 PM",
-          duration: "1 hour",
-          location: "Omotesando",
-          coordinates: {
-            lat: 35.6657,
-            lng: 139.7108
+          "name": "Shakespeare and Company Bookstore",
+          "description": "Browse through the famous Shakespeare and Company bookstore.",
+          "time": "02:30 PM",
+          "duration": "2 hours",
+          "location": "Shakespeare and Company",
+          "coordinates": {
+            "lat": 48.8525747,
+            "lng": 2.3471123
           },
-          cost: 30,
-          category: "food"
+          "cost": 0.0,
+          "category": "sightseeing"
         },
         {
-          name: "TeamLab Borderless",
-          description: "Immersive digital art museum - must book in advance!",
-          time: "03:00 PM",
-          duration: "2.5 hours",
-          location: "Odaiba",
-          coordinates: {
-            lat: 35.6250,
-            lng: 139.7751
+          "name": "Sainte-Chapelle",
+          "description": "Visit Sainte-Chapelle, a stunning Gothic chapel known for its beautiful stained glass windows.",
+          "time": "05:00 PM",
+          "duration": "2 hours",
+          "location": "Sainte-Chapelle",
+          "coordinates": {
+            "lat": 48.8553933,
+            "lng": 2.34499406295433
           },
-          cost: 45,
-          category: "attraction"
+          "cost": 11.5,
+          "category": "sightseeing"
         },
         {
-          name: "Roppongi Hills Dinner",
-          description: "Dinner with a view at Roppongi's modern complex",
-          time: "07:00 PM",
-          duration: "2 hours",
-          location: "Roppongi",
-          coordinates: {
-            lat: 35.6606,
-            lng: 139.7298
+          "name": "Farewell Dinner",
+          "description": "Enjoy a final Parisian dinner at a restaurant of your choice.",
+          "time": "07:30 PM",
+          "duration": "2 hours",
+          "location": "Le Coupe-Chou",
+          "coordinates": {
+            "lat": 48.8484873,
+            "lng": 2.3463043
           },
-          cost: 60,
-          category: "food"
+          "cost": 75.0,
+          "category": "food"
         }
       ]
     }
